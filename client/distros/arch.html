@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arch Linux — Omnitrix</title>
+  <meta name="description" content="Arch Linux: the DIY Linux distro for advanced users who want total control over every byte of their system." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation — logo only -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;">
+        <img src="../assets/omnitrix.png" alt="Omnitrix" class="nav-logo" />
+        Omnitrix
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="distro-hero">
+    <div class="container">
+      <a href="../index.html" class="back-link">← Back to Quiz</a>
+      <p class="section-label">Distro Guide</p>
+      <h1 class="fade-in">⚡ Arch Linux</h1>
+      <p class="tagline fade-in">"You install everything manually. Including your ego."</p>
+    </div>
+  </section>
+
+  <!-- Target User -->
+  <section>
+    <div class="container">
+      <p class="section-label">Who It's For</p>
+      <h2 class="section-title fade-in">Target User</h2>
+      <div class="info-block fade-in">
+        <p>Arch is for <strong style="color: var(--text)">advanced Linux users who want a system built entirely by their own hands</strong>. There's no graphical installer, no pre-configured desktop, no hand-holding. You start from a minimal base and assemble your system piece by piece. That's the point.</p>
+        <ul class="feature-list mt-16">
+          <li>Experienced Linux users who want to understand every layer of their OS</li>
+          <li>Power users who want rolling updates — always the latest packages</li>
+          <li>People who treat their OS as a craft, not just a tool</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section>
+    <div class="container">
+      <p class="section-label">Strengths</p>
+      <h2 class="section-title fade-in">What Arch Does Best</h2>
+      <div class="card-grid">
+        <div class="card fade-in">
+          <h3>♾️ Rolling Release</h3>
+          <p class="mt-8">Arch never has a "version." You update packages continuously and always have the latest stable software. Install once, never reinstall.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>📖 The Arch Wiki</h3>
+          <p class="mt-8">The Arch Wiki is the most comprehensive Linux documentation on the internet. It's so good that even Ubuntu and Fedora users use it.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>📦 AUR — Arch User Repository</h3>
+          <p class="mt-8">The AUR has more packages than any other distro's repository. If software exists for Linux, it's on the AUR. Often within hours of release.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="download-section">
+    <div class="container">
+      <h2 class="fade-in">Ready... Are You Sure?</h2>
+      <p class="fade-in">Download the Arch ISO. Read the wiki first. Seriously, read the wiki.</p>
+      <a href="https://archlinux.org/download/" target="_blank" rel="noopener" class="btn fade-in">Download Arch Linux →</a>
+    </div>
+  </section>
+
+  <!-- Basics -->
+  <section>
+    <div class="container">
+      <p class="section-label">Getting Started</p>
+      <h2 class="section-title fade-in">Basics</h2>
+      <div class="info-block fade-in">
+        <h3>Step 1: The Installation (Not for the Faint of Heart)</h3>
+        <p>Arch has no graphical installer. You boot into a terminal and follow the Arch Installation Guide. You'll partition disks, configure networking, and install a bootloader — all manually. That's the tutorial.</p>
+        <div class="code-block">
+          # Verify your internet connection<br />
+          ping archlinux.org<br /><br />
+          # Start the guided install helper (optional)<br />
+          archinstall
+        </div>
+      </div>
+      <div class="info-block fade-in">
+        <h3>pacman — Arch's Package Manager</h3>
+        <p>Arch uses <code>pacman</code>. It's fast, powerful, and minimalist:</p>
+        <div class="code-block">
+          sudo pacman -Syu              # Update everything<br />
+          sudo pacman -S &lt;package&gt;      # Install a package<br />
+          sudo pacman -R &lt;package&gt;      # Remove a package
+        </div>
+      </div>
+      <div class="info-block fade-in">
+        <h3>Choosing a Desktop Environment</h3>
+        <p>Arch installs no desktop. You choose one. Popular choices: <strong style="color: var(--text)">GNOME</strong>, <strong style="color: var(--text)">KDE Plasma</strong>, <strong style="color: var(--text)">i3</strong>, <strong style="color: var(--text)">Hyprland</strong>. Each one is a rabbit hole worth going down.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Features -->
+  <section>
+    <div class="container">
+      <p class="section-label">Power User</p>
+      <h2 class="section-title fade-in">Advanced Features</h2>
+      <div class="info-block fade-in">
+        <h3>AUR Helpers — yay or paru</h3>
+        <p>Install an AUR helper to access community packages with the same syntax as pacman:</p>
+        <div class="code-block">
+          # Install yay (AUR helper)<br />
+          git clone https://aur.archlinux.org/yay.git<br />
+          cd yay && makepkg -si<br /><br />
+          # Then install anything<br />
+          yay -S &lt;aur-package&gt;
+        </div>
+      </div>
+      <div class="info-block fade-in">
+        <h3>PKGBUILD — Build Your Own Packages</h3>
+        <p>Every AUR package is a <code>PKGBUILD</code> script — a simple bash file that describes how to build and package software. You can inspect, modify, and submit your own. Total transparency, total control.</p>
+      </div>
+      <div class="info-block fade-in">
+        <h3>systemd Mastery</h3>
+        <p>On Arch, you manage services directly with systemd — no GUI abstraction layers. Understanding systemd on Arch is directly transferable to production Linux servers:</p>
+        <div class="code-block">
+          systemctl status &lt;service&gt;<br />
+          systemctl enable --now &lt;service&gt;<br />
+          journalctl -u &lt;service&gt; -f
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Omnitrix · A Linux guide for humans · <a href="../index.html" style="color: var(--accent)">Back to quiz</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/transitions.js"></script>
+</body>
+</html>

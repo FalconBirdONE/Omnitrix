@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omnitrix — Find Your Linux</title>
+    <meta name="description" content="Omnitrix helps you find the right Linux distribution." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- Animated grid background -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- ===== FULL-VIEWPORT HERO ===== -->
+    <section class="full-hero" id="hero-section">
+
+        <!-- Omnitrix emblem image -->
+        <div class="hero-emblem">
+            <img src="assets/omnitrix.png" alt="Omnitrix" class="hero-logo-img" />
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-title">
+            <span class="title-omni">Omni</span><span class="title-trix">trix</span>
+        </h1>
+        <p class="hero-byline">Your personal guide to the right Linux distribution.</p>
+
+        <!-- Watch Selector — integrated, sits in hero -->
+        <div class="hero-watch">
+            <div class="watch-3d-scene" id="watch-container">
+                <div class="watch-bezel">
+                    <div class="watch-core" id="watch-core">
+                        <div class="hologram-projection" id="hologram">
+                            <div class="holo-icon" id="holo-icon">🟠</div>
+                            <div class="holo-name" id="holo-name">Ubuntu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-readout">
+                <div class="hud-label">Target Identified</div>
+                <h2 class="hud-title" id="hud-title">Ubuntu</h2>
+                <p class="hud-desc" id="hud-desc">"It just works. Usually."</p>
+                <div class="hardware-controls">
+                    <button class="hw-btn" id="btn-left" aria-label="Previous">◀</button>
+                    <button class="hw-btn select" id="btn-select" aria-label="Engage">ENGAGE</button>
+                    <button class="hw-btn" id="btn-right" aria-label="Next">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll down arrow -->
+        <a href="#bottom-panel" class="scroll-arrow" id="scroll-arrow" aria-label="Scroll down">
+            <span class="scroll-arrow-icon">↓</span>
+        </a>
+
+    </section>
+
+    <!-- ===== BOTTOM PANEL ===== -->
+    <section class="bottom-section" id="bottom-panel">
+        <div class="bottom-grid">
+
+            <!-- LEFT: Quiz -->
+            <div class="quiz-col">
+                <span class="section-label">Not sure?</span>
+                <h2 class="bottom-heading">Take the Quiz</h2>
+                <p class="bottom-subheading">Three questions. We'll handle the rest.</p>
+                <form id="quiz-form" class="quiz-inline-form">
+                    <div class="form-group">
+                        <label for="experience">Linux experience</label>
+                        <select id="experience" name="experience" required>
+                            <option value="" disabled selected>Select level</option>
+                            <option value="beginner">Beginner — never used Linux</option>
+                            <option value="intermediate">Intermediate — used it a bit</option>
+                            <option value="advanced">Advanced — I live in the terminal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="purpose">Main purpose</label>
+                        <select id="purpose" name="purpose" required>
+                            <option value="" disabled selected>Select purpose</option>
+                            <option value="general">General use</option>
+                            <option value="dev">Development</option>
+                            <option value="customization">Full customization</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ui">UI preference</label>
+                        <select id="ui" name="ui" required>
+                            <option value="" disabled selected>Select preference</option>
+                            <option value="simple">Simple &amp; familiar</option>
+                            <option value="modern">Modern &amp; polished</option>
+                            <option value="control">I'll build it myself</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-full">Find My Distro →</button>
+                </form>
+                <div id="quiz-result"></div>
+            </div>
+
+            <!-- RIGHT: Quick Nav -->
+            <div class="nav-col">
+                <span class="section-label">Browse directly</span>
+                <h2 class="bottom-heading">Distro Guides</h2>
+                <p class="bottom-subheading">Jump straight to a full guide.</p>
+                <div class="distro-quick-links">
+                    <a href="distros/ubuntu.html" class="distro-link fade-in">
+                        <span class="distro-link-icon">🟠</span>
+                        <div class="distro-link-text"><strong>Ubuntu</strong><small>Beginner · General</small></div>
+                        <span class="distro-link-arrow">→</span>
+                    </a>
+                    <a href="distros/mint.html" class="distro-link fade-in">
+                        <span class="distro-link-icon">🌿</span>
+                        <div class="distro-link-text"><strong>Linux Mint</strong><small>Beginner · Switchers</small>
+                        </div>
+                        <span class="distro-link-arrow">→</span>
+                    </a>
+                    <a href="distros/fedora.html" class="distro-link fade-in">
+                        <span class="distro-link-icon">🔵</span>
+                        <div class="distro-link-text"><strong>Fedora</strong><small>Intermediate · Dev</small></div>
+                        <span class="distro-link-arrow">→</span>
+                    </a>
+                    <a href="distros/popos.html" class="distro-link fade-in">
+                        <span class="distro-link-icon">🚀</span>
+                        <div class="distro-link-text"><strong>Pop!_OS</strong><small>Intermediate · GPU</small></div>
+                        <span class="distro-link-arrow">→</span>
+                    </a>
+                    <a href="distros/arch.html" class="distro-link fade-in">
+                        <span class="distro-link-icon">⚡</span>
+                        <div class="distro-link-text"><strong>Arch Linux</strong><small>Advanced · Control</small></div>
+                        <span class="distro-link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Omnitrix · A Linux guide for humans · No tracking, no backend, just HTML.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/transitions.js"></script>
+</body>
+
+</html>

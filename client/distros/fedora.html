@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fedora — Omnitrix</title>
+  <meta name="description" content="Fedora: cutting-edge Linux for developers who want fresh software without living on the edge of a cliff." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation — logo only -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;">
+        <img src="../assets/omnitrix.png" alt="Omnitrix" class="nav-logo" />
+        Omnitrix
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="distro-hero">
+    <div class="container">
+      <a href="../index.html" class="back-link">← Back to Quiz</a>
+      <p class="section-label">Distro Guide</p>
+      <h1 class="fade-in">🔵 Fedora</h1>
+      <p class="tagline fade-in">"Bleeding edge, but not bleeding out."</p>
+    </div>
+  </section>
+
+  <!-- Target User -->
+  <section>
+    <div class="container">
+      <p class="section-label">Who It's For</p>
+      <h2 class="section-title fade-in">Target User</h2>
+      <div class="info-block fade-in">
+        <p>Fedora is for <strong style="color: var(--text)">developers and technically-minded intermediate users</strong> who want modern, up-to-date software without the instability of rolling releases. It's backed by Red Hat, which means it's tested seriously before shipping.</p>
+        <ul class="feature-list mt-16">
+          <li>Software developers who want the latest toolchains and libraries</li>
+          <li>Intermediate Linux users ready to go beyond Ubuntu</li>
+          <li>People who want a pure GNOME experience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section>
+    <div class="container">
+      <p class="section-label">Strengths</p>
+      <h2 class="section-title fade-in">What Fedora Does Best</h2>
+      <div class="card-grid">
+        <div class="card fade-in">
+          <h3>🔬 Latest Software</h3>
+          <p class="mt-8">Fedora ships the newest versions of compilers, runtimes, and developer tools — often months before Debian-based distros catch up.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>🎨 Pure GNOME</h3>
+          <p class="mt-8">Fedora ships an unmodified, vanilla GNOME desktop — the reference implementation. No bloat, no OEM tweaks.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>🏢 Red Hat Backing</h3>
+          <p class="mt-8">Fedora is the upstream for RHEL. The security practices, testing, and open-source commitment are enterprise-grade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="download-section">
+    <div class="container">
+      <h2 class="fade-in">Ready to Install?</h2>
+      <p class="fade-in">Download Fedora Workstation — developer-ready out of the box.</p>
+      <a href="https://fedoraproject.org/workstation/download" target="_blank" rel="noopener" class="btn fade-in">Download Fedora →</a>
+    </div>
+  </section>
+
+  <!-- Basics -->
+  <section>
+    <div class="container">
+      <p class="section-label">Getting Started</p>
+      <h2 class="section-title fade-in">Basics</h2>
+      <div class="info-block fade-in">
+        <h3>DNF — Fedora's Package Manager</h3>
+        <p>Fedora uses <code>dnf</code> instead of <code>apt</code>. The commands are almost identical:</p>
+        <div class="code-block">
+          sudo dnf update<br />
+          sudo dnf install &lt;package-name&gt;
+        </div>
+      </div>
+      <div class="info-block fade-in">
+        <h3>GNOME Software</h3>
+        <p>Fedora's GNOME Software center lets you browse and install apps graphically — including Flatpaks, which are sandboxed and distribution-agnostic.</p>
+      </div>
+      <div class="info-block fade-in">
+        <h3>Release Cycle</h3>
+        <p>Fedora releases a new version approximately every 6 months. Each version is supported for about 13 months. Plan to upgrade — this isn't a "set it and forget it" system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Features -->
+  <section>
+    <div class="container">
+      <p class="section-label">Power User</p>
+      <h2 class="section-title fade-in">Advanced Features</h2>
+      <div class="info-block fade-in">
+        <h3>RPM Fusion — Extra Packages</h3>
+        <p>Fedora is strict about open-source by default. For proprietary drivers (Nvidia, codecs), enable RPM Fusion:</p>
+        <div class="code-block">
+          sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+        </div>
+      </div>
+      <div class="info-block fade-in">
+        <h3>Toolbox — Container Dev Environments</h3>
+        <p>Fedora ships with <code>toolbox</code> — a CLI tool to create Fedora-based development containers without Docker. Test libraries and tools without polluting your host system.</p>
+        <div class="code-block">
+          toolbox create<br />
+          toolbox enter
+        </div>
+      </div>
+      <div class="info-block fade-in">
+        <h3>SELinux — Security Out of the Box</h3>
+        <p>Fedora ships with SELinux enforced by default — a mandatory access control system used in enterprise Linux. Most users won't notice it, but it's protecting you constantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Omnitrix · A Linux guide for humans · <a href="../index.html" style="color: var(--accent)">Back to quiz</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/transitions.js"></script>
+</body>
+</html>
