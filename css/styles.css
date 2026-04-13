@@ -728,13 +728,13 @@ section {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10.6px;
   z-index: 100;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 10px;
-  border-radius: 20px;
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  padding: 13.2px;
+  border-radius: 26.5px;
 }
 
 .side-nav-item {
@@ -742,11 +742,11 @@ section {
   background: transparent;
   color: rgba(255, 255, 255, 0.65);
   font: inherit;
-  font-size: 0.82rem;
+  font-size: 0.97rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.023em;
   text-align: right;
-  padding: 6px 10px;
+  padding: 7.9px 13.2px;
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
